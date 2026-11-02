@@ -1,0 +1,346 @@
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#EEEAFE">
+<title>BuildCircle — Build Together</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<main class="page-container">
+<section class="brand-section">
+<a href="#" class="logo">
+<span class="logo-icon">B</span>
+<span>BuildCircle</span>
+</a>
+<div class="brand-content">
+<span class="eyebrow">A COMMUNITY OF BUILDERS</span>
+<h1>Great ideas<br>are built <span>together.</span></h1>
+<p>Find your people, share your ideas, and turn your imagination into something real.</p>
+<div class="feature-list">
+<div class="feature"><span class="feature-icon">✦</span>Discover like-minded people</div>
+<div class="feature"><span class="feature-icon">↗</span>Build meaningful projects</div>
+<div class="feature"><span class="feature-icon">◎</span>Showcase what you create</div>
+</div>
+</div>
+<div class="brand-footer">Made for people who love to build.</div>
+</section>
+
+<section class="auth-section">
+<div class="auth-card">
+<div class="mobile-logo">
+<span class="logo-icon">B</span>
+<span>BuildCircle</span>
+</div>
+
+<div id="loginView" class="auth-view">
+<div class="form-heading">
+<span class="welcome-tag">WELCOME BACK</span>
+<h2>Let's get building.</h2>
+<p>Log in to continue your journey.</p>
+</div>
+<form id="loginForm">
+<div class="input-group">
+<label for="loginEmail">Email address</label>
+<input type="email" id="loginEmail" placeholder="you@example.com" autocomplete="email" required>
+</div>
+<div class="input-group">
+<div class="label-row">
+<label for="loginPassword">Password</label>
+<button type="button" class="text-button" id="forgotBtn">Forgot password?</button>
+</div>
+<div class="password-wrapper">
+<input type="password" id="loginPassword" placeholder="Enter your password" autocomplete="current-password" required>
+<button type="button" class="toggle-password" data-target="loginPassword">Show</button>
+</div>
+</div>
+<button type="submit" class="primary-button">
+Log in <span>→</span>
+</button>
+</form>
+<div class="form-switch">
+Don't have an account?
+<button type="button" class="text-button" id="showSignup">Sign up</button>
+</div>
+</div>
+
+<div id="signupView" class="auth-view hidden">
+<div class="form-heading">
+<span class="welcome-tag">JOIN THE COMMUNITY</span>
+<h2>Create your account.</h2>
+<p>Start building something amazing.</p>
+</div>
+<form id="signupForm">
+<div class="input-group">
+<label for="signupName">Full name</label>
+<input type="text" id="signupName" placeholder="Your name" autocomplete="name" minlength="2" maxlength="60" required>
+</div>
+<div class="input-group">
+<label for="signupEmail">Email address</label>
+<input type="email" id="signupEmail" placeholder="you@example.com" autocomplete="email" required>
+</div>
+<div class="input-group">
+<label for="signupPassword">Password</label>
+<div class="password-wrapper">
+<input type="password" id="signupPassword" placeholder="At least 8 characters" autocomplete="new-password" minlength="8" required>
+<button type="button" class="toggle-password" data-target="signupPassword">Show</button>
+</div>
+</div>
+<div class="input-group">
+<label for="confirmPassword">Confirm password</label>
+<div class="password-wrapper">
+<input type="password" id="confirmPassword" placeholder="Enter password again" autocomplete="new-password" required>
+<button type="button" class="toggle-password" data-target="confirmPassword">Show</button>
+</div>
+</div>
+<button type="submit" class="primary-button">
+Create account <span>→</span>
+</button>
+</form>
+<div class="form-switch">
+Already have an account?
+<button type="button" class="text-button" id="showLogin">Log in</button>
+</div>
+</div>
+
+<div id="message" class="message" role="status" aria-live="polite"></div>
+<div class="auth-bottom">
+By continuing, you agree to our
+<a href="#" id="termsLink">Terms</a> and
+<a href="#" id="privacyLink">Privacy Policy</a>.
+</div>
+</div>
+</section>
+</main>
+
+<main id="dashboardView" class="dashboard-view hidden">
+<aside class="sidebar">
+
+<a href="#" class="logo">
+<span class="logo-icon">B</span>
+<span>BuildCircle</span>
+</a>
+
+<div class="sidebar-profile">
+<div class="sidebar-avatar">B</div>
+<div>
+<strong id="sidebarUserName">Builder</strong>
+<span>Student account</span>
+</div>
+</div>
+
+<nav class="sidebar-navigation">
+<p class="nav-heading">WORKSPACE</p>
+
+<button class="nav-item active" data-page="home">⌂ Dashboard</button>
+<button id="logoutBtn" class="nav-item">↪ Log out</button>
+<button class="nav-item" data-page="discover">◎ Discover</button>
+<button class="nav-item" data-page="join">♧ Join a Team</button>
+<button class="nav-item" data-page="create">＋ Create a Team</button>
+<button class="nav-item" data-page="build">⌘ Build Together</button>
+
+<p class="nav-heading nav-heading-spaced">PERSONAL</p>
+<button class="nav-item" data-page="profile">♙ My Profile</button>
+<button class="nav-item" data-page="saved">♡ Saved Projects</button>
+</nav>
+
+<div class="sidebar-bottom">
+<div class="sidebar-help">
+<span>✦</span>
+<strong>Have an idea?</strong>
+<p>Find your people and start building.</p>
+</div>
+</div>
+</aside>
+
+<section class="dashboard-main">
+<header class="dashboard-topbar">
+<div class="topbar-title">
+<span class="topbar-mobile-logo">B</span>
+<div>
+<strong>Workspace</strong>
+<span>Let's build something.</span>
+</div>
+</div>
+<div class="topbar-actions">
+<label class="dashboard-search">
+<span>⌕</span>
+<input type="search" id="dashboardSearch" placeholder="Search projects, people...">
+</label>
+<button class="topbar-icon" id="notificationBtn">♧</button>
+<button class="topbar-avatar" id="profileShortcut">B</button>
+</div>
+</header>
+
+<div class="dashboard-content">
+<section id="homePage" class="dashboard-page">
+
+<section class="welcome-banner">
+<div class="welcome-banner-content">
+<span>YOUR BUILDING SPACE</span>
+<h1>Welcome back,<br><strong id="userName">Builder</strong>!</h1>
+<p>Great things happen when people build together. What's your next idea?</p>
+<button class="banner-button" data-page="create">Start a project →</button>
+</div>
+<div class="banner-decoration">
+<div class="banner-circle circle-one"></div>
+<div class="banner-circle circle-two"></div>
+<div class="banner-symbol">✦</div>
+</div>
+</section>
+
+<section class="quick-access-section">
+<div class="section-heading">
+<div>
+<span class="section-eyebrow">GET STARTED</span>
+<h2>Explore BuildCircle</h2>
+</div>
+</div>
+<div class="quick-access-grid">
+<button class="quick-access-card" data-page="join">
+<span class="quick-access-icon">♧</span>
+<strong>Join a Team</strong>
+<small>Find projects and collaborate with students.</small>
+</button>
+<button class="quick-access-card" data-page="create">
+<span class="quick-access-icon">＋</span>
+<strong>Create a Team</strong>
+<small>Bring your idea to life and invite teammates.</small>
+</button>
+<button class="quick-access-card" data-page="discover">
+<span class="quick-access-icon">◎</span>
+<strong>Discover</strong>
+<small>Explore students, skills and ideas.</small>
+</button>
+<button class="quick-access-card" data-page="build">
+<span class="quick-access-icon">⌘</span>
+<strong>Build Together</strong>
+<small>Collaborate with your project team.</small>
+</button>
+<button class="quick-access-card" data-page="profile">
+<span class="quick-access-icon">♙</span>
+<strong>My Profile</strong>
+<small>Showcase your skills and projects.</small>
+</button>
+<button class="quick-access-card" data-page="saved">
+<span class="quick-access-icon">♡</span>
+<strong>Saved Projects</strong>
+<small>Return to projects you bookmarked.</small>
+</button>
+</div>
+</section>
+
+<section class="dashboard-section">
+<div class="section-heading">
+<div>
+<span class="section-eyebrow">STAY UPDATED</span>
+<h2>What's happening?</h2>
+</div>
+</div>
+<div class="updates-grid">
+<article class="update-card announcement-card">
+<div class="card-topline">
+<span class="update-icon">✦</span>
+<span class="update-label">ANNOUNCEMENT</span>
+</div>
+<h3>Welcome to BuildCircle!</h3>
+<p>Connect with students, discover exciting ideas and start building meaningful projects together.</p>
+<a href="#" class="update-link" data-page="discover">Explore the community →</a>
+</article>
+<article class="update-card reminder-card">
+<div class="card-topline">
+<span class="update-icon">◷</span>
+<span class="update-label">REMINDERS</span>
+</div>
+<h3>Your next opportunity awaits.</h3>
+<p>Keep track of upcoming events, project deadlines and team updates.</p>
+<span class="reminder-status">Your reminders will appear here.</span>
+</article>
+</div>
+</section>
+
+<section class="dashboard-section">
+<div class="section-heading">
+<div>
+<span class="section-eyebrow">HANDPICKED FOR YOU</span>
+<h2>Featured projects</h2>
+</div>
+<button class="section-link" data-page="join">Explore all →</button>
+</div>
+<div class="featured-grid">
+<article class="featured-card">
+<div class="project-art project-art-one">
+<span>01 / INNOVATION</span>
+<div>✳</div>
+</div>
+<div class="project-details">
+<span class="project-category">HARDWARE</span>
+<h3>Smart Waste Management</h3>
+<p>A smart system designed to improve waste segregation.</p>
+<div class="project-footer">
+<span>Arduino · IoT</span>
+<button data-page="join">View project →</button>
+</div>
+</div>
+</article>
+<article class="featured-card">
+<div class="project-art project-art-two">
+<span>02 / DEVELOPMENT</span>
+<div>⌘</div>
+</div>
+<div class="project-details">
+<span class="project-category">SOFTWARE</span>
+<h3>Campus Connect</h3>
+<p>A platform that brings college communities together.</p>
+<div class="project-footer">
+<span>Web · UI/UX</span>
+<button data-page="join">View project →</button>
+</div>
+</div>
+</article>
+</div>
+</section>
+
+<section class="dashboard-section">
+<div class="opportunity-banner">
+<div>
+<span>YOUR NEXT STEP</span>
+<h2>Ideas become real when we build together.</h2>
+<p>Find collaborators who share your curiosity.</p>
+</div>
+<button data-page="discover">Find your circle →</button>
+</div>
+</section>
+</section>
+
+<section id="otherPage" class="dashboard-page hidden">
+<div class="other-page-heading">
+<span class="section-eyebrow">BUILDCIRCLE WORKSPACE</span>
+<h1 id="otherPageTitle">Discover</h1>
+<p id="otherPageDescription">Explore the BuildCircle community.</p>
+</div>
+<div class="coming-soon-card">
+<span>✦</span>
+<h2>Something exciting is coming.</h2>
+<p>We're building this section step by step. Stay tuned!</p>
+</div>
+</section>
+
+<footer class="dashboard-footer">
+Made for people who love to build. © BuildCircle
+</footer>
+</div>
+</section>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
